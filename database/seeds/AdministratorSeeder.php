@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
 class AdministratorSeeder extends Seeder
 {
@@ -11,7 +14,6 @@ class AdministratorSeeder extends Seeder
      */
     public function run()
     {
-        
         $administrator = new \App\User;
         $administrator->username = "administrator";
         $administrator->name = "Site Administrator";
@@ -21,9 +23,7 @@ class AdministratorSeeder extends Seeder
         $administrator->avatar = "saat-ini-tidak-ada-file.png";
         $administrator->address = "Sarmili, Bintaro, Tangerang Selatan";
         $administrator->phone = "089716251451";
-
         $administrator->save();
-
         $this->command->info("User Admin berhasil diinsert");
     }
 }
