@@ -51,7 +51,7 @@
                                 <!-- <td><img src="{{asset('storage/uploads/'.$user->avatar)}}" class="w-25 rounded" alt="no found"></td> -->
                                  <td>{{$user->status}}</td>
                                 <td class="text-center">
-                                    <button class="btn btn-sm btn-success"><span class="oi oi-eye"></span></button>
+                                    <a href="{{route('users.show',[$user->id])}}" class="btn btn-sm btn-success"><span class="oi oi-eye"></span></a>
                                     <button class="btn btn-sm btn-primary"><span class="oi oi-pencil"></span></button>
                                     <button class="btn btn-sm btn-danger"><span class="oi oi-trash"></span></button>
                                 </td>
@@ -66,4 +66,36 @@
             <!-- Table -->
         </div>
     </div>
+
+    
+    <!-- Modal Detail-->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Launch demo modal
+    </button>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <ul class="list-group">
+            <li class="list-group-item">Cras justo odio</li>
+            <li class="list-group-item">Dapibus ac facilisis in</li>
+            <li class="list-group-item">Morbi leo risus</li>
+            <li class="list-group-item">Porta ac consectetur ac</li>
+            <li class="list-group-item">Vestibulum at eros</li>
+            </ul>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+        </div>
+    </div>
+    </div>
+    <!-- Modal Detail-->
     @endsection

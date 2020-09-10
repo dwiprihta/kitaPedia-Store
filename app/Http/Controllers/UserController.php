@@ -102,7 +102,9 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+        dd($id);
+        //show detail data user
+        return view('users.index',['user'=>$id]);
     }
 
     /**
