@@ -11,6 +11,7 @@
   <title>Larashop @yield("title")</title>
   <link rel="stylesheet" href="{{asset('polished/polished.min.css')}}">
   <link rel="stylesheet" href="{{asset('polished/iconic/css/open-iconic-bootstrap.min.css')}}">
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
   <!-- <style>
     .grid-highlight {

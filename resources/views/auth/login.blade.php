@@ -8,6 +8,8 @@
             <div class="card bg-white border">
                 {{-- <div class="card-header bg-transparent border-0">{{ __('Login') }}</div> --}}
                 <div class="card-body">
+
+<lottie-player src="https://assets7.lottiefiles.com/packages/lf20_O711lP.json"  background="transparent"  speed="1"  style="width: 150px; height: 150px;"  loop  autoplay></lottie-player>                <hr>
                     <form method="POST" action="{{ route('login') }}" aria-label="{{ __('Login') }}">
                         @csrf
                         <div class="form-group row">

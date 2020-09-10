@@ -8,11 +8,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Larashop @yield("title")</title>
+  <title>Larashop | @yield("title")</title>
   <link rel="stylesheet" href="{{asset('polished/polished.min.css')}}">
   <link rel="stylesheet" href="{{asset('polished/iconic/css/open-iconic-bootstrap.min.css')}}">
 
-  <!-- <style>
+  <style>
     .grid-highlight {
       padding-top: 1rem;
       padding-bottom: 1rem;
@@ -32,19 +32,20 @@
   </style>
   <script type="text/javascript">
     document.documentElement.className = document.documentElement.className.replace('no-js', 'js') + (document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#BasicStructure", "1.1") ? ' svg' : ' no-svg');
-  </script> -->
+  </script>
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand p-0">
-     <a class="navbar-brand text-center col-xs-12 col-md-3 col-lg-2 mr-0" href="index.html"> Larashop </a>
+    <nav class="navbar navbar-expand">
+     <a class="navbar-brand text-center col-xs-12 col-md-3 col-lg-2 mr-0" href="index.html"><span class="oi oi-book"></span> KitaPedia.Com </a>
       <button class="btn btn-link d-block d-md-none" data-toggle="collapse" data-target="#sidebar-nav" role="button" >
         <span class="oi oi-menu"></span>
       </button>
 
       <input class="border-dark bg-primary-darkest form-control d-none d-md-block w-50 ml-3 mr-2" type="text" placeholder="Search" aria-label="Search">
       <div class="dropdown d-none d-md-block">
+        <img class="d-none d-lg-inline rounded-circle ml-1" width="32px" src="assets/azamuddin.jpg" alt="MA"/>
         @if(\Auth::user())
         <button class="btn btn-link btn-link-primary dropdown-toggle" id="navbar-dropdown" data-toggle="dropdown">
           {{Auth::user()->name}}
@@ -70,7 +71,31 @@
 
             <ul class="polished-sidebar-menu ml-0 pt-4 p-0 d-md-block">
               <input class="border-dark form-control d-block d-md-none mb-4" type="text" placeholder="Search" aria-label="Search" />
+              <ul class="polished-sidebar-menu ml-0 pt-4 p-0 d-md-block">
+              <input class="border-dark form-control d-block d-md-none mb-4" type="text" placeholder="Search" aria-label="Search" />
               <li><a href="/home"><span class="oi oi-home"></span> Home</a></li>
+              <li><a href="/users"><span class="oi oi-person"></span> User</a></li>
+              <li class=""><a href="charts.html"><span class="oi oi-pie-chart"></span> Charts</a></li>
+              <li><a href="widgets.html"><span class="oi oi-puzzle-piece"></span></span> Widget / UI</a></li>
+              <li><a href="forms.html"><span class="oi oi-browser"></span> Forms</a></li>
+              <li><a href="buttons.html"><span class="oi oi-plus"></span> Buttons</a></li>
+              <li><a href="table.html"><span class="oi oi-spreadsheet"></span> Table</a></li>
+              <li><a href="colors.html"><span class="oi oi-sun"></span> Colors</a></li>
+              <li><a href="font-sizes.html"><span class="oi oi-text"></span> Font Sizes</a></li>
+              <div class="pt-4">
+                  <a href="#" class="pl-3 fs-smallest fw-bold text-muted">LAYOUT OPTIONS </a> 
+                  <ul class="list-unstyled">
+                      <li class=""><a href="two-columns.html"><span class="oi oi-vertical-align-top"></span>Two Columns</a></li>
+                      <li><a href="one-column.html"><span class="oi oi-monitor"></span>One Column</a></li>
+                  </ul>
+              </div>
+              <div class="d-block d-md-none">
+                  <div class="dropdown-divider"></div>
+                  <li><a href="#"> Profile</a></li>
+                  <li><a href="#"> Setting</a></li>
+                  <li><a href="#"> Sign Out</a></li>
+              </div>
+            </ul>
 
               <div class="d-block d-md-none">
                   <div class="dropdown-divider"></div>
@@ -110,5 +135,11 @@
   crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+  <script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+  <script>
+    $(document).ready(function() {
+    $('#data_users_reguler').DataTable();
+} );
+</script>
 </body>
 </html>
